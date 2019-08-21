@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'create-user-application';
+  
+  users = [];
+
+  handleAddUser(user){
+    this.users.push(user);
+  }
 }

@@ -1,0 +1,27 @@
+<div class="container">
+    <form (ngSubmit)="onSubmitForm(form)" #form="ngForm">
+        <div class="form-user">
+            <p>
+                <label class="label-form" for="name">Nome completo</label>
+                <input class="input-form" type="text" name="name" id="name" #nameCtrl="ngModel" ngModel required>
+                <span *ngIf="nameCtrl.status === 'INVALID' && nameCtrl.touched">Campo obrigatório!</span>
+            </p>
+
+            <p>
+                <label class="label-form" for="email">E-mail</label>
+                <input class="input-form" type="email" name="email" id="email" #emailCtrl="ngModel" ngModel required>
+                <span *ngIf="emailCtrl.status === 'INVALID' && emailCtrl.touched">Campo obrigatório!</span>
+            </p>
+            <p>
+                <label class="label-form" for="address">Endereço</label>
+                <input class="input-form" type="text" name="address" id="address" #enderecoCtrl="ngModel" ngModel
+                    required>
+                <span *ngIf="enderecoCtrl.status === 'INVALID' && enderecoCtrl.touched">Campo obrigatório!</span>
+            </p>
+
+            <p>
+                <button [disabled]="form.status === 'INVALID'" class="btn-salvar">Salvar</button>
+            </p>
+        </div>
+    </form>
+</div>

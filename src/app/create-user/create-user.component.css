@@ -1,0 +1,40 @@
+.container {    
+    margin: 0 40%;
+}
+
+.form-user {        
+    width: 100%;
+    display: inline-block;
+}
+
+.label-form {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.input-form {
+    display: block;
+    padding-right: 150px;
+    padding-top: 8px;
+    padding-bottom: 8px;    
+    border: 1px groove #CECECE;
+    border-radius: 5px;
+}
+
+.btn-salvar {    
+    color: white;    
+    font-size: 16px;
+    padding: 10px 35px;
+    background-color: rgba(63, 129, 77, 0.664);
+    border-radius: 10px;
+}
+
+.btn-salvar:hover {
+    cursor: pointer;
+    background-color: rgba(46, 133, 65, 0.493);
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
