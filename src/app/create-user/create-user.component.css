@@ -15,7 +15,7 @@
 
 .input-form {
     display: block;
-    padding-right: 150px;
+    width: 350px;
     padding-top: 8px;
     padding-bottom: 8px;    
     border: 1px groove #CECECE;

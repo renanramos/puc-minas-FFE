@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-create-user',
@@ -7,14 +8,13 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class CreateUserComponent implements OnInit {
 
-  @Output() addUser = new EventEmitter<any>();
-
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit() {
   }
 
   onSubmitForm(form){
-    this.addUser.emit(form.value);
+    this.usersService.addUser(form.value);
+    form.reset(); // limpa os campos após a inclusão
   }
 }
